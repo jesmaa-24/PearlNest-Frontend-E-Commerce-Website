@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Account - PearlNest</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.account-page{
+  padding:40px 6%;
+  background:#faf6f0;
+  min-height:75vh;
+  font-family:"Poppins", sans-serif;
+}
+
+.account-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:25px;
+  color:#4b2e17;
+  font-family:"Playfair Display", serif;
+}
+
+/* Container */
+.account-box{
+  max-width:450px;
+  margin:auto;
+  background:white;
+  border-radius:12px;
+  border:2px solid #c8a165;
+  box-shadow:0 6px 14px rgba(0,0,0,0.12);
+  padding:20px;
+}
+
+/* Switch Buttons */
+.account-tabs{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:15px;
+}
+
+.account-tabs button{
+  width:48%;
+  padding:8px 0;
+  border-radius:20px;
+  border:2px solid #c8a165;
+  background:#faf6f0;
+  color:#4b2e17;
+  cursor:pointer;
+}
+
+.account-tabs button.active{
+  background:#4b2e17;
+  color:white;
+}
+
+/* Forms */
+.account-form{
+  display:none;
+}
+
+.account-form input{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1.5px solid #c8a165;
+  outline:none;
+  margin:8px 0;
+  background:#faf6f0;
+}
+
+.account-form button{
+  width:100%;
+  padding:10px;
+  border-radius:20px;
+  border:none;
+  background:#4b2e17;
+  color:white;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.account-form button:hover{
+  background:#c8a165;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+PearlNest
+<div>
+<a href="index.html">Home</a>
+<a href="rings.html">Rings</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</div>
+</header>
+
+<section class="account-page">
+
+<h2 class="account-title">My Account</h2>
+
+<div class="account-box">
+
+  <div class="account-tabs">
+    <button id="loginTab" class="active">Login</button>
+    <button id="registerTab">Register</button>
+  </div>
+
+  <!-- Login Form -->
+  <form class="account-form" id="loginForm" style="display:block;">
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <button>Login</button>
+  </form>
+
+  <!-- Register Form -->
+  <form class="account-form" id="registerForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <button>Create Account</button>
+  </form>
+
+</div>
+
+</section>
+
+<script>
+const loginTab = document.getElementById("loginTab");
+const registerTab = document.getElementById("registerTab");
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+
+loginTab.onclick = () => {
+  loginTab.classList.add("active");
+  registerTab.classList.remove("active");
+  loginForm.style.display = "block";
+  registerForm.style.display = "none";
+}
+
+registerTab.onclick = () => {
+  registerTab.classList.add("active");
+  loginTab.classList.remove("active");
+  registerForm.style.display = "block";
+  loginForm.style.display = "none";
+}
+</script>
+
+</body>
+</html>
