@@ -56,3 +56,6 @@ No backend required.
 ---
 
 ## 📂 Project Structure
+
+<img width="1919" height="924" alt="Screenshot 2025-12-31 180955" src="https://github.com/user-attachments/assets/a4580dd6-7888-4dd5-8c67-02e10449ab5f" />
+
